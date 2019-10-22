@@ -2,5 +2,4 @@
 .Rhistory
 .RData
 .Ruserdata
-*_cache$
-.DS_Store
+index_cache

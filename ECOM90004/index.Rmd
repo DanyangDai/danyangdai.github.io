@@ -1,6 +1,6 @@
 ---
 title: "An Empircial Investigation into the Growing Global Financial Implications of China "
-subtitle: Slides<a href="https://danyangdai.github.io/#1"target="_blank">"https://danyangdai.github.io/#1"</a>
+subtitle: Slides<a href="https://danyangdai.github.io/ECOM90004"target="_blank">"https://danyangdai.github.io/ECOM90004"</a>
 date: "2019/10/23"
 output:
   xaringan::moon_reader:
@@ -32,7 +32,6 @@ library(dplyr)
 .pull-right[
 ### The research question posed to this end is whether volatility in China has a significant impact on volatility in other markets and whether this impact has been increasing over time. 
 ]
-
 ---
 ## Contents
 
@@ -78,7 +77,7 @@ library(gganimate)
 library(tidyr)
 library(readxl)
 library(gifski)
-total<- read_excel("~/Desktop/Master/S2/Time Series ECOM90004/Group Project /Data1/total.xlsx")
+total<- read_excel("data/total.xlsx")
 totallong<- gather(total, country, index,China:India)
 totallong$index <- as.numeric(as.character(totallong$index))
 g<- ggplot(data=totallong, aes(x = Date, y = index)) + 
@@ -200,7 +199,7 @@ library(gganimate)
 library(tidyr)
 library(readxl)
 library(gifski)
-total<- read_excel("~/Desktop/Master/S2/Time Series ECOM90004/Group Project /Data1/total.xlsx")
+total<- read_excel("data/total.xlsx")
 totallong<- gather(total, country, index,China:India)
 totallong$index <- as.numeric(as.character(totallong$index))
 g<- ggplot(data=totallong, aes(x = Date, y = index)) + 
