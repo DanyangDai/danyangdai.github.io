@@ -1,6 +1,6 @@
 ---
 title: "An Empircial Investigation into the Growing Global Financial Implications of China "
-subtitle: Slides<a href="https://danyangdai.github.io/#1"target="_blank">"https://danyangdai.github.io/#1"</a>
+subtitle: Slides<a href="https://danyangdai.github.io/ECOM90004"target="_blank">"https://danyangdai.github.io/ECOM90004"</a>
 date: "2019/10/23"
 output:
   xaringan::moon_reader:
