@@ -163,12 +163,67 @@ The Cholesky ordering is based on the open time for the relevant stock markets. 
 ## Granger Causality
 .pull-left[ 
 .left[
-- Granger Causality Test:  
-H0: There is no granger causality from y1 to y2  
-H1: There is evidence of granger causality   
-- Exogeneity Test:  
-H0: y1 is exogenous   
-H1: yi is endogenous   ]]
+- During the post-crash period, the granger causality test tells us that the volatility in none of the stock markets included in the sample are being granger caused by the volatility in the China stock market.
+- The individual p-value for the relevant granger causality test indicate that in the during and post-crash periods China’s volatility granger causes the volatility in three of the other stock markets including HK, Japan and India.
+]]
+.pull-right[ 
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Stock Market &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Pre &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; During &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Post &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Hong Kong &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0006 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0086 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0290 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Japan &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0604 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.3039 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0063 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Australia &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0404 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0271 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.1996 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; India &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.1974 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0218 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0001 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; France &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.1220 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.4176 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2620 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; The US &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.4692 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.9802 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2276 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+---
+## Granger Causality
+
+.pull-left[ 
+.left[
+- The overall p values for China in these granger causality test lead to the conclusion that it is exogeneous in the last period and endogenous in the first 2 periods.
+- This result suggests that China is moving away from being a stock market that it is influenced by volatility in other stock market to one that influences and cause volatility in other financial markets. China does not granger cause France or US in any periods. 
+]]
 
 .pull-right[ 
 &lt;table&gt;
