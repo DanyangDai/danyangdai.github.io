@@ -1,6 +1,6 @@
 ---
 title: "An Empircial Investigation into the Growing Global Financial Implications of China "
-subtitle: Slides<a href="https://danyangdai.github.io/ECOM90004"target="_blank">"https://danyangdai.github.io/ECOM90004"</a>
+subtitle: Slides<a href="https://danyangdai.github.io/#1"target="_blank">"https://danyangdai.github.io/#1"</a>
 date: "2019/10/23"
 output:
   xaringan::moon_reader:
@@ -32,6 +32,7 @@ library(dplyr)
 .pull-right[
 ### The research question posed to this end is whether volatility in China has a significant impact on volatility in other markets and whether this impact has been increasing over time. 
 ]
+
 ---
 ## Contents
 
@@ -40,7 +41,7 @@ library(dplyr)
 ### Granger Causality
 ### Variance Decompositions 
 ### Diebold-Yilmaz Spillover Index 
-### Conclusion
+### Discussion
 ---
 ## Data 
 .center[![](pic.png)]
@@ -77,7 +78,7 @@ library(gganimate)
 library(tidyr)
 library(readxl)
 library(gifski)
-total<- read_excel("data/total.xlsx")
+total<- read_excel("~/Desktop/Master/S2/Time Series ECOM90004/Group Project /Data1/total.xlsx")
 totallong<- gather(total, country, index,China:India)
 totallong$index <- as.numeric(as.character(totallong$index))
 g<- ggplot(data=totallong, aes(x = Date, y = index)) + 
@@ -176,16 +177,6 @@ H1: yi is endogenous   ]]
 
 .pull-right[![](vd3.png)]
 ---
-## Variance Decompositions 
-### Long Term Effect - After 1 Month 
-.pull-left[ 
-- For the US market, only 18% of the variation is due to the variation in china’s stock market in pre-crash period.
-- The percentage suddenly jump up to 45% in during-crash period. After that, in post-crash period, the percentage even increase to 60%. 
-- All of them have shown the evidence of increasing influence of China’s stock market.
-]
-
-.pull-right[![](vd4.png)]
----
 ## Diebold-Yilmaz Spillover Index 
 ```{r}
 tribble(
@@ -197,22 +188,11 @@ tribble(
 ```
 
 .left[
-- The statistics summary of the spillover indexes calculated is shown in Table 5 for three different forecast horizons of 1, 5 and 25, which correspond to a day, week and month respectively, for the pre-crisis, crisis and post-crisis periods. 
--	Secondly, the highest degree of the spillover between the markets is considered during the period covered by China’s stock market crash, by comparing the spillover indexes of the same horizon across pre-crisis, during-crisis and post-crisis periods.
- ]
- 
+- Firstly, it seems that over longer forecast horizons volatility spillover between financial markets increases.   
+- Secondly, there is a higher degree of volatility spillover between the markets considered during the period covered by China’s stock market crash.   
+- While the degree of volatility spillover between markets falls in post-crash period relative to the period covered by the crash, it increases relative to the period prior to the crash. ]
 ---
-## Diebold-Yilmaz Spillover Index 
-### It provides a suggestive evidence that the increase in the spillover is driven by China.
-
-.left[
-- Firstly, there is a large spike in this measure in the period covered by China’s stock market crash. 
-- Secondly, the index increases in the post-crash period relative to the pre-crash period. 
-]
-.center[![](spill1.png)]
-
----
-## Conclusion
+## Discussion
 .center[
 ```{r plot2, cache=TRUE, message=FALSE, warning = FALSE,out.width = '700px'}
 library(ggplot2)
@@ -220,7 +200,7 @@ library(gganimate)
 library(tidyr)
 library(readxl)
 library(gifski)
-total<- read_excel("data/total.xlsx")
+total<- read_excel("~/Desktop/Master/S2/Time Series ECOM90004/Group Project /Data1/total.xlsx")
 totallong<- gather(total, country, index,China:India)
 totallong$index <- as.numeric(as.character(totallong$index))
 g<- ggplot(data=totallong, aes(x = Date, y = index)) + 
@@ -234,20 +214,5 @@ g<- ggplot(data=totallong, aes(x = Date, y = index)) +
 animate(g, height = 600, width =1000)
 ```
 ]
----
-## Conclusion
-.center[![](dis1.jpg)]
 
 ---
-class: center, middle 
-
-.center[![](far.png)]
-
-
----
-class: center, middle 
-background-image:url(chilli.jpg)
-background-position: center;
-background-repeat: no-repeat;
-background-size: contain;  
-# Thank You 
