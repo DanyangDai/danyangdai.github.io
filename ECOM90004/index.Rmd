@@ -45,9 +45,6 @@ library(dplyr)
 ## Data 
 .center[![](pic.png)]
 
-.left[
-There is a nascent body of literature documenting the fact that shocks to the onceisolated Chinese stock market are having greater implications for financial markets all over the world.]
-
 ---
 ## Data
 
@@ -66,7 +63,8 @@ tribble(
   knitr::kable(format = "html") 
 
 ```
-
+.left[
+There is a nascent body of literature documenting the fact that shocks to the once isolated Chinese stock market are having greater implications for financial markets all over the world.]
 ---
 ## Data 
 
@@ -203,12 +201,12 @@ tribble(
  
 ---
 ## Diebold-Yilmaz Spillover Index 
-### It provides a suggestive evidence that the increase in the spillover is driven by China.
 
 .left[
 - Firstly, there is a large spike in this measure in the period covered by China’s stock market crash. 
 - Secondly, the index increases in the post-crash period relative to the pre-crash period. 
-]
+- Link: The variations in volatility in each stock market that is due to variations in China’s stock market volatility.
+- It provides a suggestive evidence that the increase in the spillover over the same period is driven by China.]
 .center[![](spill1.png)]
 
 ---
