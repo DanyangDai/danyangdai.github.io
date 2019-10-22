@@ -32,6 +32,7 @@ library(dplyr)
 .pull-right[
 ### The research question posed to this end is whether volatility in China has a significant impact on volatility in other markets and whether this impact has been increasing over time. 
 ]
+
 ---
 ## Contents
 
@@ -152,7 +153,29 @@ H1: yi is endogenous   ]]
 ```
 ]
 
+---
+## Variance Decompositions 
 
+.center[![](vd1.png)]
+---
+## Variance Decompositions 
+### Immediate Effect - After 1 Day
+
+.pull-left[
+- For Japan, about 18% variation due to the variation in China’s stock market in during-period, and only 3% in pre-period. 
+- For India, France, and The US, there are large increases in their variation that is due to the variation in the Chinese stock market in During-crash period comparing to the pre-crash period. 
+]
+
+.pull-right[![](vd2.png)]
+---
+## Variance Decompositions 
+### Short Term Effect - After 1 Week 
+.pull-left[ 
+- In general there is a large spike in the percentage variance in forecasted volatility in each stock market that is due to the variance in china’s stock market in the during period. 
+- In period after crash, these percentages fall to a level but they still higher than that in the pre-crash period. 
+]
+
+.pull-right[![](vd3.png)]
 ---
 ## Diebold-Yilmaz Spillover Index 
 ```{r}
