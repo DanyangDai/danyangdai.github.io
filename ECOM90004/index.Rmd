@@ -77,7 +77,7 @@ library(gganimate)
 library(tidyr)
 library(readxl)
 library(gifski)
-total<- read_excel("~/Desktop/Master/S2/Time Series ECOM90004/Group Project /Data1/total.xlsx")
+total<- read_excel("data/total.xlsx")
 totallong<- gather(total, country, index,China:India)
 totallong$index <- as.numeric(as.character(totallong$index))
 g<- ggplot(data=totallong, aes(x = Date, y = index)) + 
@@ -152,7 +152,6 @@ H1: yi is endogenous   ]]
 ```
 ]
 
-
 ---
 ## Diebold-Yilmaz Spillover Index 
 ```{r}
@@ -177,7 +176,7 @@ library(gganimate)
 library(tidyr)
 library(readxl)
 library(gifski)
-total<- read_excel("~/Desktop/Master/S2/Time Series ECOM90004/Group Project /Data1/total.xlsx")
+total<- read_excel("data/total.xlsx")
 totallong<- gather(total, country, index,China:India)
 totallong$index <- as.numeric(as.character(totallong$index))
 g<- ggplot(data=totallong, aes(x = Date, y = index)) + 
