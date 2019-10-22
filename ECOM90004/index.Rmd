@@ -196,6 +196,7 @@ tribble(
 
 .left[
 - The statistics summary of the spillover indexes calculated is shown in Table 5 for three different forecast horizons of 1, 5 and 25, which correspond to a day, week and month respectively, for the pre-crisis, crisis and post-crisis periods. 
+-Firstly, the spillover between markets increases with the forecast horizon increasing. 
 -	Secondly, the highest degree of the spillover between the markets is considered during the period covered by China’s stock market crash, by comparing the spillover indexes of the same horizon across pre-crisis, during-crisis and post-crisis periods.
  ]
  
