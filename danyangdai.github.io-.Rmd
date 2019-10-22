@@ -1,5 +1,6 @@
 ---
 title: "An Empircial Investigation into the Growing Global Financial Implications of China "
+subtitle: Slides<a href="https://danyangdai.github.io/#1"target="_blank">"https://danyangdai.github.io/#1"</a>
 date: "2019/10/23"
 output:
   xaringan::moon_reader:
@@ -13,13 +14,14 @@ author:
 -  "Danyang Dai "
 -  "Chang Liu" 
 -  "Zongmin Mei"
-
 ---
 class: center, middle 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library(xaringan)
 library(tibble)
+library(magrittr)
+library(dplyr) 
 ```
 
 ## China's Influence in the Global Financial Market - Volatility Index 
@@ -42,6 +44,10 @@ library(tibble)
 ---
 ## Data 
 .center[![](pic.png)]
+
+.left[
+There is a nascent body of literature documenting the fact that shocks to the onceisolated Chinese stock market are having greater implications for financial markets all over the world.]
+
 ---
 ## Data
 
@@ -60,7 +66,6 @@ tribble(
   knitr::kable(format = "html") 
 
 ```
-
 
 ---
 ## Data 
@@ -114,7 +119,7 @@ tribble(
   "India","3:45-10:00",
   "France", "8:00-16:30",
   "The US", "14:30-21:00"
-) %>% 
+) %>%
   knitr::kable(format = "html")
 ```
   
@@ -139,39 +144,23 @@ H1: yi is endogenous   ]]
   "Hong Kong", 0.0006,0.0086,0.029,
   "Japan",0.0604,0.3039,0.0063,
   "Australia",0.0404,0.0271,0.1996,
-  "India",0.1974,0.0271,0.1996,
+  "India",0.1974,0.0218,0.0001,
   "France", 0.1220,0.4176, 0.2620,
   "The US", 0.4692,0.9802,0.2276
-)  %>% 
+) %>%
   knitr::kable(format = "html")
 ```
 ]
 
----
-## Diebold-Yilmaz Spillover Index 
-
-.center[![](spillover.png)]
-
---
-.left[
-- $VD_{ij}$: represents the contribution to the variance of the ith variable from a shock in the jth variable 
-- $VD_{ii}$: represents the contribution to the variance of the ith variable from its own shocks]
---
-.left[
-- By subtracting out the effects of each variables own shocks, the spillover index gives the percentage of total variability in the system that is due to spillovers between markets.     
-- The strategy in the following section is to compute and compare the spillover indexes for three different forecast horizons in the pre-crisis, crisis and post-crisis periods.     
-]
 
 ---
 ## Diebold-Yilmaz Spillover Index 
-
 ```{r}
 tribble(
   ~ " ", ~"H=1(one day after shock) ", ~"H=5(one week after shock) ", ~"H=25(one month after shock) ",
-  "pre-crisis", "0.16691", "0.27544", "0.40123",   
-  "during-crisis", "0.40064", "0.58175", "0.67241",
-  "post-crisis", "0.19097", "0.43093", "0.56084",
-) %>% 
+  "pre-crisis", 0.16691, 0.27544, 0.40123,   
+  "during-crisis", 0.40064, 0.58175, 0.67241,
+  "post-crisis", 0.19097, 0.43093, 0.56084) %>%
   knitr::kable(format = "html")
 ```
 
@@ -180,10 +169,27 @@ tribble(
 - Secondly, there is a higher degree of volatility spillover between the markets considered during the period covered by China’s stock market crash.   
 - While the degree of volatility spillover between markets falls in post-crash period relative to the period covered by the crash, it increases relative to the period prior to the crash. ]
 ---
+## Discussion
+.center[
+```{r plot2, cache=TRUE, message=FALSE, warning = FALSE,out.width = '700px'}
+library(ggplot2)
+library(gganimate)
+library(tidyr)
+library(readxl)
+library(gifski)
+total<- read_excel("~/Desktop/Master/S2/Time Series ECOM90004/Group Project /Data1/total.xlsx")
+totallong<- gather(total, country, index,China:India)
+totallong$index <- as.numeric(as.character(totallong$index))
+g<- ggplot(data=totallong, aes(x = Date, y = index)) + 
+  geom_line(aes(color = country))  +
+  ylab("index") +
+  xlab("Date")  +
+  ggtitle("Vix Index Over The Period") +
+  geom_vline(xintercept = as.POSIXct("2015-06-01"), linetype=4)+
+  geom_vline(xintercept = as.POSIXct("2016-06-01"), linetype=4)+ 
+  transition_reveal(Date) 
+animate(g, height = 600, width =1000)
+```
+]
 
-
-
-
-
-
-
+---
