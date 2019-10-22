@@ -114,7 +114,7 @@ tribble(
   "India","3:45-10:00",
   "France", "8:00-16:30",
   "The US", "14:30-21:00"
-) %>% 
+) %>%
   knitr::kable(format = "html")
 ```
   
@@ -142,7 +142,7 @@ H1: yi is endogenous   ]]
   "India",0.1974,0.0271,0.1996,
   "France", 0.1220,0.4176, 0.2620,
   "The US", 0.4692,0.9802,0.2276
-)  %>% 
+) %>%
   knitr::kable(format = "html")
 ```
 ]
@@ -164,14 +164,13 @@ H1: yi is endogenous   ]]
 
 ---
 ## Diebold-Yilmaz Spillover Index 
-
 ```{r}
 tribble(
   ~ " ", ~"H=1(one day after shock) ", ~"H=5(one week after shock) ", ~"H=25(one month after shock) ",
-  "pre-crisis", "0.16691", "0.27544", "0.40123",   
-  "during-crisis", "0.40064", "0.58175", "0.67241",
-  "post-crisis", "0.19097", "0.43093", "0.56084",
-) %>% 
+  "pre-crisis", 0.16691, 0.27544, 0.40123,   
+  "during-crisis", 0.40064, 0.58175, 0.67241,
+  "post-crisis", 0.19097, 0.43093, 0.56084
+) %>%
   knitr::kable(format = "html")
 ```
 
