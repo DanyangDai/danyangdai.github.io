@@ -1,0 +1,16 @@
+base
+xaringan
+tibble
+magrittr
+dplyr
+tidyverse
+ggplot2
+tidyr
+readr
+purrr
+stringr
+forcats
+formattable
+gganimate
+readxl
+gifski
